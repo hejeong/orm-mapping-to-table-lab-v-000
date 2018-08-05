@@ -29,7 +29,7 @@ class Student
           SQL
     DB[:conn].execute(sql, self.name, self.grade)
 
-    @id = DB[:conn].execute("SELECT id FROM students ORDER BY id DESC")
+    @id = DB[:conn].execute("SELECT id FROM students ORDER BY id DESC")[0][0]
   end
 
 
