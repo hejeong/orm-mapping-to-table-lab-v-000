@@ -6,6 +6,6 @@ class Student
     @grade = grade
   end
 
-  def 
+  def
 
 end
