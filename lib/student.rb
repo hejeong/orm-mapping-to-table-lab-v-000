@@ -32,6 +32,9 @@ class Student
     @id = DB[:conn].execute("SELECT id FROM students ORDER BY id DESC")[0][0]
   end
 
-
+  def self.create(name:, grade:)
+    new_student = self.new(name, grade)
+    
+  end
 
 end
