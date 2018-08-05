@@ -27,6 +27,10 @@ class Student
           INSERT INTO students (name, grade) VALUES (?,?)
           SQL
     DB[:conn].execute(sql, name, grade)
+
+    @id = DB[:conn].execute("SELECT id FROM students ORDER BY id DESC")
   end
+
+  
 
 end
